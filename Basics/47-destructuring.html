@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+
+        const name = ["Ramdani", "Hardiansyah", "Luthfia", "Nur", "Ichsani"];
+        const [firstName, middleName, lastName, ...other] = name;
+
+        console.info(other);
+
+
+        {
+            const person = {
+                firstName: "Ramdani",
+                lastName: "Hardiansyah",
+                hobby: "Lari",
+                adress: {
+                    negara: "Indonesia",
+                    kota: "Garut"
+                },
+            };
+
+            let {firstName, lastName, hobby, adress: {negara, kota}} = person;
+
+            console.info(firstName);
+            console.info(negara);
+        }
+
+
+{
+        function sum ([first, second]) {
+            return first + second;
+        }
+
+        console.info(sum([10,10]));
+
+}
+
+    </script>
+
+</body>
+</html>
