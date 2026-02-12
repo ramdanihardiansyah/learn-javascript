@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Field</title>
+</head>
+<body>
+    
+    <script>
+
+        class Person {
+
+            say (name) {
+                if (name) {
+                    this.#sayWithName(name);
+                } else if (firstName, lastName){
+                    this.#sayWithWithName(firstName, lastName);
+                } else {
+                    this.#sayWithoutName();
+                };
+            };
+
+            #sayWithName (name) {
+                console.info(`Hallo ${name}`);
+            };
+
+            #sayWithWithName (firstName, lastName) {
+                console.info(`Hallo Nama Saya ${firstName} ${lastName}`);
+            };
+
+            #sayWithoutName () {
+                console.info(`Hallo`);
+            };
+
+        };
+
+        const ramdani = new Person();
+        ramdani.say("Luthfia Nur Ichsani");
+        ramdani.say("Ramdani", "Hardiansyah");
+
+    </script>
+
+</body>
+</html>

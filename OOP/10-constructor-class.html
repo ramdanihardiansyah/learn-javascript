@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Class</title>
+</head>
+<body>
+
+    <script>
+
+        class Person {
+            constructor (name) {
+                this.name = name;
+                };
+
+            sayHello (name) {
+                console.info(`Hallo ${name}, Nama Saya ${this.name}`);
+            };
+        };
+
+        const ramdani = new Person ("Ramdani");
+        console.info(ramdani);
+        ramdani.sayHello("Joko");
+
+
+        class Orang {
+            constructor (bun) {
+                this.bun = bun;
+            };
+
+            sayGoodbye (good) {
+                console.info (`Hallo ${good}, My Name is ${this.bun}`);
+            };
+        };
+
+
+        const luthfia = new Orang ("Luthfia Nur Ichsani");
+        console.info(luthfia);
+        luthfia.sayGoodbye("Ramdani");
+
+
+        class A {
+            constructor (b) {
+                this.b = b;
+            };
+            sayHay (c) {
+                console.info(`Hallo ${this.b}, Nama saya adalah ${c}`);
+            };
+        };
+        
+        const mas = new A ("Ramdani Hardiansyah");
+        console.info(mas);
+        mas.sayHay("Ramdani");
+
+        class Z {
+            constructor (y) {
+                this.y = y;
+            };
+
+            saySay (x) {
+                console.info(`Hallo ${x}, My name is ${this.y}`);
+            };
+        };
+
+        <p>Halo nama saya Ramdani Hardiansyah, saya berasal dari garut dan usia saya 22 tahun, sekarang saya belajar menjadi Full Stack Develper di dicoding academy dengan mengambil front end di react dan python sebagai backend, namun sekarang selain belajar di sana say ajuga belajar di beberapa platform seperti di WPU Course dan Programmer Zaman Now, tapi saya ikut di dicoding ini sebagai validasi kalau saya juga memiliki backround IT, karena sebelumnya saya tidak memiliki backgroud IT sama sekali dan hany asebagai mahasiswa pendidikan agama islam</p>
+
+        const u = new Z ("Ramdani Hardiansyah");
+        console.info(u);
+        u.saySay("John");
+
+
+
+
+    </script>
+    
+</body>
+</html>

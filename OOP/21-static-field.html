@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    
+    <script>
+        // static field
+
+        // class Configuration {
+        //     static name = "Ramdani Hardiansyah";
+        //     static materi = "JavaScript Dasar OOP";
+        //     static version = 1.0;
+        // };
+
+        // Configuration.name = "Luthfia Nur Ichsani";
+
+        // console.info(Configuration.name);
+
+        // static method
+
+
+        class ValidationError extends Error {
+            constructor (message, field) {
+                super(message);
+                this.field = field;
+            };
+        };
+
+        class Util {
+            static sum (...numbers){
+
+                if (numbers.length === 0) {
+                    throw new ValidationError (`Data yang dimasukkan tidak boleh 0`, "numbers");
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total -= number;
+                } 
+                return total;
+            };
+        };
+
+        try {
+            const hasil = Util.sum();
+            console.info(hasil);
+        } catch (error) {
+            if (error instanceof ValidationError) {
+                console.info(`Terjadi Error di field ${error.field} dengan error ${error.message}`)
+            } else {
+                console.info(`Terjadi Error: ${error.message}`);
+            };
+        } finally {
+            console.info(`Kode Yang anda masukkan telah selesai`);
+        }
+
+        const result = Util.sum(1);
+        console.info(result);
+    </script>
+
+</body>
+</html>
