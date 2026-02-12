@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="komentarForm">
+
+        <label for="comment">
+            Comment : <input type="text" id="comment" name="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input type="text" id="from" name="from">
+        </label>
+        <br>
+        <input type="submit">
+
+    </form>
+
+    <div id="listKomentar">
+
+    </div>
+
+    <script>
+        document.forms["komentarForm"].onsubmit = function (event) {
+            const listComment = document.getElementById("listKomentar");
+            const comment = document.forms["komentarForm"]["comment"].value;
+            const from = document.forms["komentarForm"]["from"].value;
+
+            const newElement = document.createElement("p");
+            newElement.textContent = `Hallo nama saya ${comment}, senang bertemu dengan ${from}`;
+            listComment.appendChild(newElement);
+
+            document.forms["komentarForm"].reset();
+
+            event.preventDefault();
+
+        }
+        
+
+    </script>
+</body>
+</html>
